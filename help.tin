@@ -1,0 +1,164 @@
+type
+Welcome to the (propably) easiest programming language called Tin
+
+type
+So let's start shall we?
+
+type
+Press enter to continue...
+
+input
+
+clear
+
+
+type
+The basic commands are:
+
+type
+type - Used to print a text
+
+type
+clear - Used to clear the screen
+
+type
+clear_setup - Used to define the clearing setup (defined either by "win" or "linux")
+
+type
+type_var - Used to print a variable
+
+type
+var - Used to define a variable
+
+type
+var_count - Used to add/subtract/devide/multiply two integer-type variables
+
+type
+var_input - Used to store the user input into a variable
+
+type
+input - Used to store the user input into a pre-created variable called input
+
+type
+wait - Used to wait some time in seconds (float numbers don't work)
+
+type
+cmd - Used to use an external command from the command line
+
+type
+Press enter to continue...
+
+input
+
+clear
+
+type
+The basic syntax of the tin language is really easy,
+
+type
+type        <- First you need to type a command
+
+type
+Hello World <- Then the argument to the command
+
+type
+
+
+type
+So this would output:
+
+type
+Hello World
+
+type
+
+
+type
+This syntax works with commands: type, type_var, cmd, wait, input
+
+type
+This syntax is called a two-line syntax
+
+type
+Also I need to note that after every syntax type you need to leave a enter in the code to avoid problems
+
+type
+Press enter to continue...
+
+input
+
+clear
+
+type
+The next syntax is called a three-line syntax
+
+type
+It's simmilar to the last one except there is one more line
+
+type
+
+
+type
+It's used like this:
+
+type
+var           <- First you call the command
+
+type
+Message       <- Then you'll define the first argument
+
+type
+Hello world!  <- Then the second
+
+type
+This would save data "Hello world!" into a variable called "Message"
+
+type
+This syntax applies to commands: var, var_input
+
+type
+Press enter to continue...
+
+input
+
+clear
+
+type
+Next is the four-line syntax:
+
+type
+Again, it's the same except we add one more line to define one more argument
+
+type
+
+
+type
+A showcase here:
+
+type
+var_count  <- First we'll call the command
+
+type
+variable1  <- Then we'll define what variable we want to operate with
+
+type
+a          <- Then we'll define what operation we want to do with these two numbers (a - add and so on...)
+
+type
+variable2  <- And then we will define the second number
+
+type
+This code would store the result of those two numbers into the pre-made variable called "result"
+
+type
+
+
+type
+Press enter to continue
+
+input
+
+clear
+
+type
+If statements:
