@@ -40,7 +40,7 @@ type
 input - Used to store the user input into a pre-created variable called input
 
 type
-wait - Used to wait some time in seconds (float numbers don't work)
+wait - Used to wait some time in seconds (float numbers work too)
 
 type
 cmd - Used to use an external command from the command line
@@ -162,5 +162,3 @@ clear
 
 type
 If statements:
-
-

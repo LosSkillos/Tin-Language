@@ -96,23 +96,24 @@ while cnt != len(content):
 		if attype == "var_count_2":
 			var2 = int(vrb[readline])
 			if op == "a":
-				vrb[str(var1)] = var1 + var2
+				vrb[savevar] = var1 + var2
 			if op == "m":
-				vrb[str(var1)] = var1 * var2
+				vrb[savevar] = var1 * var2
 			if op == "s":
-				vrb[str(var1)] = var1 - var2
+				vrb[savevar] = var1 - var2
 			if op == "d":
-				vrb[str(var1)] = var1 / var2
+				vrb[savevar] = var1 / var2
 			at = False
 			attype = ""
 		if attype == "var_count_op":
 			op = readline
 			attype = "var_count_2"
 		if attype == "var_count":
+			savevar = readline
 			var1 = int(vrb[readline])
 			attype = "var_count_op"
 		if attype == "wait":
-			wait = int(readline)
+			wait = float(readline)
 			time.sleep(wait)
 			at = False
 			attype = ""
@@ -125,7 +126,41 @@ while cnt != len(content):
 			cnt = int(parts[readline])
 			at = False
 			attype = ""
+		if attype == "if_e3":
+			gopart = readline
+			var1c = vrb[var1c]
+			var2c = vrb[var2c]
+			gopartc = parts[gopart]
+			if var1c == var2c:
+				cnt = gopartc
+			at = False
+			attype = ""
+		if attype == "if_e2":
+			var2c = readline
+			attype = "if_e3"
+		if attype == "if_e":
+			var1c = readline
+			attype = "if_e2"
+		if attype == "if_b3":
+			gopart = readline
+			var1c = int(vrb[var1c])
+			var2c = int(vrb[var2c])
+			gopartc = parts[gopart]
+			if var1c > var2c:
+				cnt = gopartc
+			at = False
+			attype = ""
+		if attype == "if_b2":
+			var2c = readline
+			attype = "if_b3"
+		if attype == "if_b":
+			var1c = readline
+			attype = "if_b2"
 	else:
+		if readline == "debug_part":
+			print(parts)
+		if readline == "debug_var":
+			print(vrb)
 		if readline == "goto":
 			at = True
 			attype = "goto"
@@ -159,4 +194,10 @@ while cnt != len(content):
 		if readline == "var_count":
 			at = True
 			attype = "var_count"
+		if readline == "if_e":
+			at = True
+			attype = "if_e"
+		if readline == "if_b":
+			at = True
+			attype = "if_b"
 	cnt = cnt + 1
