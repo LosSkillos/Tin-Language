@@ -42,9 +42,22 @@ with open(filepath) as f:
 content = [x.strip() for x in content] 
 cnt = 0
 vrb["result"] = 0
+num = 0
+ispart = False
+scancont = content
+while num != len(scancont):
+	readline = scancont[num]
+	if ispart:
+		parts[readline] = num
+		ispart = False
+	else:
+		if readline == "part":
+			ispart = True
+	num = num + 1
+
 while cnt != len(content):
 	readline = content[cnt]
-	if at == True:
+	if at:
 		if attype == "cmd":
 			os.system(readline)
 			at = False
@@ -60,7 +73,7 @@ while cnt != len(content):
 				os.system("clear")
 			at = False
 			attype = ""
-		if attype == "type" :
+		if attype == "type":
 			print(readline)
 			at = False
 			attype = ""
@@ -108,10 +121,6 @@ while cnt != len(content):
 			vrb[inpvar] = input()
 			at = False
 			attype = ""
-		if attype == "part":
-			parts[readline] = cnt
-			at = False
-			attype = ""
 		if attype == "goto":
 			cnt = int(parts[readline])
 			at = False
@@ -150,7 +159,4 @@ while cnt != len(content):
 		if readline == "var_count":
 			at = True
 			attype = "var_count"
-		if readline == "part":
-			at = True
-			attype = "part"
 	cnt = cnt + 1
