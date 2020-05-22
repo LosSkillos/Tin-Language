@@ -28,6 +28,9 @@ osn = "win"
 import os
 import sys
 import time
+import random
+from random import randint
+from random import seed
 at = False
 parts = {}
 if sys.argv[1] != '':
@@ -58,6 +61,19 @@ while num != len(scancont):
 while cnt != len(content):
 	readline = content[cnt]
 	if at:
+		if attype == "var_random3":
+			savevar = readline
+			random.seed()
+			random = randint(rmin, rmax)
+			vrb[savevar] = random
+			attype = ""
+			at = False
+		if attype == "var_random2":
+			rmax = int(readline)
+			attype = "var_random3"
+		if attype == "var_random":
+			rmin = int(readline)
+			attype = "var_random2"
 		if attype == "cmd":
 			os.system(readline)
 			at = False
@@ -157,6 +173,9 @@ while cnt != len(content):
 			var1c = readline
 			attype = "if_b2"
 	else:
+		if readline == "var_random":
+			at = True
+			attype = "var_random"
 		if readline == "debug_part":
 			print(parts)
 		if readline == "debug_var":

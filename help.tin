@@ -1,3 +1,12 @@
+part
+start
+
+var
+cinp
+TIN
+
+clear
+
 type
 Welcome to the (propably) easiest programming language called Tin
 
@@ -5,9 +14,21 @@ type
 So let's start shall we?
 
 type
-Press enter to continue...
+Type TIN to continue...
 
-input
+var_input
+inp
+
+if_e
+inp
+cinp
+tutorial
+
+goto
+start
+
+part
+tutorial
 
 clear
 
@@ -161,4 +182,53 @@ input
 clear
 
 type
+Before You'll learn how IF statements work you'll need to learn one more thing:
+
+type
+Parts
+
+type
+Similar how ":" and "goto" work in batch, you use them to return/skip to a line:
+
+type
+part     <- First you use the "part" command
+
+type
+menu     <- Than you define the part's name
+
+type
+
+
+type
+If you than later want to skip back/forward in the code you call the part like this:
+
+type
+goto     <- You call the command
+
+type
+menu     <- And than the part you want to skip back/forward to, it's really simple
+
+type
+Press enter to continue...
+
+input
+
+clear
+
+type
 If statements:
+
+type
+To create a basic IF statement:
+
+type
+if_e     <- Firstly, we call the IF_E function (e - equals) 
+
+type
+correct  <- Than we type the first variable that we want to check
+
+type
+input    <- Than the second one, the one we want to check with
+
+type
+end      <- Than the part we want to skip to if the two variables match
