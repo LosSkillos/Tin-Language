@@ -172,7 +172,29 @@ while cnt != len(content):
 		if attype == "if_b":
 			var1c = readline
 			attype = "if_b2"
+
+		if attype == "if_s3":
+			gopart = readline
+			var1c = int(vrb[var1c])
+			var2c = int(vrb[var2c])
+			gopartc = parts[gopart]
+			if var1c < var2c:
+				cnt = gopartc
+			at = False
+			attype = ""
+		if attype == "if_s2":
+			var2c = readline
+			attype = "if_s3"
+		if attype == "if_s":
+			var1c = readline
+			attype = "if_s2"
+			
+			
+			
 	else:
+		if readline == "if_s":
+			at = True
+			attype = "if_s"
 		if readline == "var_random":
 			at = True
 			attype = "var_random"
