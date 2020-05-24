@@ -90,7 +90,23 @@ while cnt != len(content):
 			at = False
 			attype = ""
 		if attype == "type":
-			print(readline)
+			vt = False
+			ptext = ""
+			text = list(readline)
+			for t in text:
+				if vt:
+					if t == "%":
+						vt = False
+						ptext = ptext + str(vrb[vn])
+					else:	
+						vn = vn + t
+				else:
+					if t != "%":
+						ptext = ptext + t
+					else:
+						vn = ""
+						vt = True
+			print(ptext)
 			at = False
 			attype = ""
 		if attype == "type_var":
